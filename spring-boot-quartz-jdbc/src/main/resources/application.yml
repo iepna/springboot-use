@@ -1,0 +1,46 @@
+server:
+    port: 8003
+
+spring: 
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   
+    url: jdbc:mysql://localhost:3306/quartz?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  
+  quartz:
+   
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: clusteredScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: true
+            clusterCheckinInterval: 10000
+            useProperties: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+    
+    job-store-type: jdbc
+      
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml    
+  typeAliasesPackage: com.quartz.domain        
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+logging:
+  file: quartz-service.log
+  level:
+    com.quartz: debug     
+    

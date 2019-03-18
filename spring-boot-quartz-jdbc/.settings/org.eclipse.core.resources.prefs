@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/main/java=GBK
+encoding//src/main/java/com/tp/controller/BaseController.java=UTF-8
+encoding//src/main/java/com/tp/controller/JobController.java=UTF-8
+encoding//src/main/java/com/tp/dao/JobAndTriggerDao.java=UTF-8
+encoding//src/main/java/com/tp/dto/JobAndTriggerDto.java=UTF-8
+encoding//src/main/java/com/tp/dto/PageResult.java=UTF-8
+encoding//src/main/java/com/tp/dto/ResponseEntity.java=UTF-8
+encoding//src/main/java/com/tp/service/IJobAndTriggerService.java=UTF-8
+encoding//src/main/java/com/tp/service/impl/JobAndTriggerImpl.java=UTF-8
+encoding//src/main/resources=GBK
+encoding//src/test/java=GBK
+encoding/<project>=GBK
