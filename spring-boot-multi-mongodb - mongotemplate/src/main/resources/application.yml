@@ -1,0 +1,9 @@
+mongodb:
+    host: 192.168.9.60
+    port: 20000
+    userName: test
+    pwd: 123456
+    first:
+      database: firstdatabase
+    second :
+      database: seconddatabase
