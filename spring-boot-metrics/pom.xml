@@ -38,6 +38,11 @@
 			<artifactId>metrics-core</artifactId>
 			<version>3.1.2</version>
 		</dependency>
+		<dependency>
+			 <groupId>com.github.davidb</groupId>
+			 <artifactId>metrics-influxdb</artifactId>
+			 <version>0.8.2</version>
+		</dependency>
 	</dependencies>
 	
 	<build>

@@ -1,6 +1,6 @@
 package com.tp;
 
-import com.codahale.metrics.ConsoleReporter;
+import com.codahale.metrics.ScheduledReporter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,7 +14,7 @@ public class HelloApplication {
 		ApplicationContext ctx = SpringApplication.run(HelloApplication.class, args);
 
 		//启动reporter
-		ConsoleReporter reporter = ctx.getBean(ConsoleReporter.class);
+		ScheduledReporter reporter = ctx.getBean(ScheduledReporter.class);
 		reporter.start(1, TimeUnit.SECONDS);
 	}
 }
